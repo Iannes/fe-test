@@ -96,7 +96,6 @@ const Home = () => {
   return (
     <div className="fade-in">
       <div className="App">
-        {/* <h1>Veriff</h1> */}
         <form
           className="form-container"
           onSubmit={handleSubmit}
