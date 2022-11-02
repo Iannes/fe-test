@@ -1,0 +1,56 @@
+.radio-button {
+    opacity: 0;
+    position: fixed;
+    height: 25px;
+}
+
+label {
+    font-weight: 400;
+    font-size: inherit;
+    line-height: 38px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-align: center;
+    border: 0;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    text-align: center;
+    position: relative;
+    padding: 0 16px;
+    cursor: pointer;
+    background-color: white;
+    width: 75px;
+    display: inline-block;
+    height: 40px;
+}
+
+label[data-left-button="true"] {
+    border-top-left-radius: var(--label-radius);
+    border-bottom-left-radius: var(--label-radius);
+}
+
+label[data-right-button="true"] {
+    border-top-right-radius: var(--label-radius);
+    border-bottom-right-radius: var(--label-radius);
+    border-left-width: 0;
+}
+
+.radio-button:checked+label {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.radio-button:focus+label {
+    outline-color: var(--color-outline);
+    outline-style: auto;
+    outline-offset: 4px;
+    border-radius: 0;
+    outline-width: 3px;
+}
+
+.radio-button:disabled+label {
+    background-color: var(--color-bg);
+    border-color: var(--color-border-disabled);
+    color: var(--color-disabled);
+    cursor: not-allowed;
+}

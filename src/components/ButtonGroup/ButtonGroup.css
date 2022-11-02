@@ -1,0 +1,63 @@
+.button-group {
+    display: flex;
+    min-height: var(--button-group-height);
+}
+
+.button-group[aria-disabled="true"]:hover {
+    pointer-events: none;
+    background-color: transparent;
+}
+
+.button-group[aria-disabled="true"] legend {
+    color: var(--color-disabled);
+}
+
+.button-group:has(label):hover {
+    background: var(--color-hover-secondary);
+}
+
+.button-group.active {
+    background-color: var(--color-hover-primary);
+}
+
+.button-group.active:hover {
+    background-color: var(--color-hover-primary);
+}
+
+.button-group button {
+    margin-top: auto;
+}
+
+form.form-container {
+    padding: var(--form-container-padding);
+}
+
+.button-group:last-child {
+    height: calc(var(--button-group-height) * 1.5);
+}
+
+@media only screen and (max-width: 480px) {
+    .button-group:last-child {
+        height: var(--button-group-height);
+    }
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+}
+
+fieldset legend {
+    padding-top: 8px;
+    color: rgba(0, 0, 0, 0.876);
+    font-size: 18px;
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+fieldset:active,
+fieldset:focus {
+    outline: 0;
+}
